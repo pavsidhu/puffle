@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accompfish | Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../static/style.min.css">
+</head>
+<body>
+  <img src="../static/logo.png" alt="logo" class="logo">
+  <a href="https://twitter.com/intent/tweet?button_hashtag=accompfish&text=I've%20been%20working%20hard%20with%20the%20help%20of%20accompfish!" class="twitter-hashtag-button" data-size="large">Tweet #accompfish</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <a href="/logout">
+    <button style="margin-top: 0; position: relative; top: 12px; float: right; right: 20px;">
+    Log Out
+    </button>
+  </a>
+
+  <div style="width: 100%; margin-top: 15px; padding-bottom: 3px; background-color: white;"></div>
+  <section style="background-color: #1E88E5; padding-">
+    <div style="width: 48%; float: left; padding-top: 10px;">
+      {% if badpage %}
+        <img src="../static/pufferBig.png" alt="logo" class="puffer">
+      {% else %}
+        <img src="../static/pufferSmall.png" alt="logo" class="puffer">
+      {% endif %}
+    </div>
+
+    <div style="width: 48%; float: left; padding-top: 10px;">
+     <form method="post" action="/add">
+        <label for="taskone" style="padding-top: 0;">Task one: </label>
+        <input type="text" id="task" name="task" placeholder="Finish my history essay">
+        <label for="dueone" style="padding-top: 0;">Due Date: </label>
+        <input type="text" id="deadline" name="deadline" placeholder="15/4/2016">
+        <button type="submit" onclick="submit()">Add Task</button>
+     </form>
+    </div>
+
+
+  <div style="clear: both">
+    <h3 style="font-size: 4em !important; padding-top: 0"> My Tasks</h3>
+
+    {% for item in tasks %}
+    <li style="color: white; padding-top:10px; text-align: center;">{{ item['task'] }} for {{ item['deadline'] }}</li>
+    {% endfor %}
+    </div>
+
+
+  </section>
+  <footer style="color: white; padding: 40px 0; text-align: center;">
+    Copyright © 2016 <br> Credits: Uri, Miranda, Jonathan and Pav.
+  </footer>
+</body>
+</html>

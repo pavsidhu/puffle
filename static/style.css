@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'Texta';
+  font-style: normal;
+  url('../static/fonts/texta.ttf');
+}
+
+*, input {
+  font-family: 'Texta', sans-serif !important;
+  font-size: 1.05em !important;
+}
+
+body {
+  background-color: #2196F3;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section * {
+  display: block;
+  margin: 0 auto;
+  padding-top: 10vh;
+}
+
+input {
+  background-color: #E3F2FD !important;
+  outline: 0 !important;
+  border: 2px #0D47A1 solid !important;
+  padding: 2em !important;
+  border-radius: 15px !important;
+}
+
+button {
+  background-color: #FFA726;
+  color: #fff;
+  font-size: 1.5em !important;
+  margin-top: 2em;
+  padding: 0.8em 1em;
+  border-radius: 15px !important;
+}
+
+button:hover {
+  background-color: #FB8C00;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding-top: 20px !important;
+}
+
+p {
+  padding: 1em;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  text-align: center;
+}
+
+p.error {
+  color: #B71C1C;
+  text-align: center;
+}
+
+img.logo {
+  margin-top: 20px;
+  width: 30%;
+}
+
+img.puffer {
+  width: 80%
+  display: block;
+  margin: 0 auto;
+  animation: puffer 3s linear infinite;
+}
+
+@-webkit-keyframes puffer {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+h3 {
+  text-align: center;
+  font-size: 2em !important;
+  color: #fff;
+}
+
+section {
+  padding-bottom: 100px;
+}

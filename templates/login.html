@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accompfish | Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../static/style.min.css">
+</head>
+<body>
+  <section>
+    <img src="../static/logo.png" alt="logo">
+    <form method="POST">
+      <input type="text" name="username" id="username" placeholder="Enter your username">
+      <input type="password" name="password" id="password" placeholder="Enter your password">
+      {% for error in get_flashed_messages() %}
+      <p class="error">{{ error }}</p>
+      {% endfor %}
+
+      {% if page == 'login' %}
+      <button type="submit" onclick="submit()">Login</button>
+      <p>
+        <a href="/register">Create an account</a>
+      </p>
+      {% elif page == 'register' %}
+      <button type="submit" onclick="submit()">Register</button>
+      <p>
+        <a href="/login">Log in with your account</a>
+      </p>
+      {% endif %}
+    </form>
+
+  </section>
+</body>
+</html>
